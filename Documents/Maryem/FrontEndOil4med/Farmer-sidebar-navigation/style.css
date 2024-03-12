@@ -1,0 +1,247 @@
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #c4af2b;
+  --light-green: #e6d98a;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--body-bg-color);
+}
+
+.container {
+  display: flex;
+  justify-content: right;
+  height: 100vh;
+  width: auto;
+  gap: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 100vh;
+  background-color: var(--green);
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.main {
+  width: calc(100% - 78px);
+  height: 100vh;
+  padding: 20px;
+  color: var(--text-color);
+  transition: all 0.2s;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--green);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 1rem;
+  padding: 15px;
+  gap: 15px;
+  transition: all 0.2s;
+}
+
+.icon:hover {
+  background-color: var(--light-green) !important;
+  cursor: pointer;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.icon-logout {
+  width: 100%;
+  height: 60px;
+  background-color: var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.icon-logout:hover {
+  background-color: var(--light-grey);
+  cursor: pointer;
+}
+
+.main h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.logout-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-green);
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 10px;
+}
+
+.logout-container #logout-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+#user-container {
+  display: flex;
+  flex-direction: column;
+  gap: -5px;
+}
+
+#user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#user-role {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+
+
+
+section.ajouter-produit {
+  width: 60%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+section.ajouter-produit h2 {
+  text-align: center;
+}
+
+section.ajouter-produit .form-group {
+  margin-bottom: 20px;
+}
+
+section.ajouter-produit .form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+section.ajouter-produit .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+section.ajouter-produit select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; /* Masquer les styles par défaut du navigateur */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path></svg>'); /* Utilisation d'une image SVG pour la flèche déroulante */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+section.ajouter-produit button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+}
+
+section.ajouter-produit button:hover {
+  background-color: var(--light-green);
+}
+
+
+
+section.vendre-produit {
+  width: 60%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+section.vendre-produit h2 {
+  text-align: center;
+}
+
+section.vendre-produit .form-group {
+  margin-bottom: 20px;
+}
+
+section.vendre-produit .form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+section.vendre-produit .form-group input[type="text"],
+section.vendre-produit .form-group textarea,
+section.vendre-produit .form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+section.vendre-produit button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+}
+
+section.vendre-produit button:hover {
+  background-color: var(--light-green);
+}
+
