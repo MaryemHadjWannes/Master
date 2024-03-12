@@ -1,0 +1,138 @@
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #c4af2b;
+  --light-green: #e6d98a;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--body-bg-color);
+}
+
+.container {
+  display: flex;
+  justify-content: right;
+  height: 100vh;
+  width: auto;
+  gap: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 100vh;
+  background-color: var(--green);
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.main {
+  width: calc(100% - 78px);
+  height: 100vh;
+  padding: 20px;
+  color: var(--text-color);
+  transition: all 0.2s;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--green);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 1rem;
+  padding: 15px;
+  gap: 15px;
+  transition: all 0.2s;
+}
+
+.icon:hover {
+  background-color: var(--light-green) !important;
+  cursor: pointer;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.icon-logout {
+  width: 100%;
+  height: 60px;
+  background-color: var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.icon-logout:hover {
+  background-color: var(--light-grey);
+  cursor: pointer;
+}
+
+.main h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.logout-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-green);
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 10px;
+}
+
+.logout-container #logout-photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+#user-container {
+  display: flex;
+  flex-direction: column;
+  gap: -5px;
+}
+
+#user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#user-role {
+  font-size: 0.7rem;
+  font-weight: 400;
+}

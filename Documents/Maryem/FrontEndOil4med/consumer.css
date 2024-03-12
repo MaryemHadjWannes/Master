@@ -1,0 +1,56 @@
+/* CSS Code Optimized Version */
+ 
+/* Shorthand Properties */
+body {
+    font: Arial, sans-serif;
+}
+ 
+/* Optimizing Selectors */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+ 
+/* Leveraging CSS Variables */
+:root {
+    --margin-bottom: 40px;
+    --margin-bottom-small: 10px;
+    --margin-bottom-medium: 20px;
+}
+ 
+.product-container {
+    margin-bottom: var(--margin-bottom);
+}
+ 
+.product-container h3 {
+    margin-bottom: var(--margin-bottom-small);
+}
+ 
+.product-container p {
+    margin-bottom: var(--margin-bottom-medium);
+}
+ 
+.product-container .buy-btn {
+    display: none;
+}
+ 
+.product-container:hover .buy-btn {
+    display: block;
+}
+ 
+.paid-products {
+    margin-top: 40px;
+}
+ 
+.paid-products h3 {
+    margin-bottom: var(--margin-bottom-medium);
+}
+ 
+.paid-products ul {
+    list-style-type: none;
+    padding: 0;
+}
+ 
+.paid-products li {
+    margin-bottom: var(--margin-bottom-small);
+}

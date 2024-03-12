@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Farmer Interface
+  </title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="farmer.css">
+  <meta content="noindex, nofollow" name="robots"/>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    Farmer Interface
+   </h1>
+   <div class="row">
+    <!-- Ethereum Address Section -->
+    <div class="col-md-6">
+     <!-- Ethereum Address Section -->
+	<div class="address-section">
+	    <h3 id="ethereumAddress">
+		Ethereum Address: Loading...
+	    </h3>
+	    <h3 id="etherBalance">
+		Ether Balance: Loading...
+	    </h3>
+	</div>
+
+    </div>
+    <!-- Add Product Section -->
+    <div class="col-md-6">
+     <div class="product-section">
+      <h3>
+       Add Product
+      </h3>
+      <form id="addProductForm">
+       <div class="form-group">
+        <label for="productName">
+         Product Name:
+        </label>
+        <input class="form-control" id="productName" name="productName" placeholder="Enter product name" type="text"/>
+       </div>
+       <div class="form-group">
+        <label for="productPrice">
+         Product Price:
+        </label>
+        <input class="form-control" id="productPrice" name="productPrice" placeholder="Enter product price" type="number"/>
+       </div>
+       <div class="form-group">
+        <label for="productQuantity">
+         Product Quantity:
+        </label>
+        <input class="form-control" id="productQuantity" name="productQuantity" placeholder="Enter product quantity" type="number"/>
+       </div>
+       <button class="btn btn-primary" type="submit">
+        Add Product
+       </button>
+      </form>
+     </div>
+    </div>
+   </div>
+   <!-- Product List Section -->
+   <div class="row">
+    <div class="col-md-12">
+     <div class="product-section">
+      <h3>
+       Product List
+      </h3>
+      <ul class="product-list" id="productList">
+       <!-- Products will be dynamically added here -->
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Bootstrap & jQuery JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+  <!-- Include Web3.js -->
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <!-- Custom JS -->
+  <script src="farmer.js">
+  </script>
+ </body>
+</html>
+

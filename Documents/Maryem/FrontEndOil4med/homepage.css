@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #c4af2b; /* Remplacez par la couleur de votre choix */
+}
+
+.navbar-brand, .nav-link{
+    color: #FFFFFF;
+}
+
+
+#hero {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.jpg');
+    background-size: cover;
+    color: #000;
+    text-shadow: 2px 2px 4px rgb(253,253,253);
+}
+
+#actors {
+    padding: 50px 0;
+}
+
+.actor-card {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.actor-card:hover {
+    transform: translateY(-10px);
+}
+
+.actor-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons .btn {
+    margin-right: 10px;
+}
+
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #b59628; !important;
+    border: none ;
+}
+
+.btn-primary: active { background-color: #b59628; !important;}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+	border: none ;
+	background-color : #541420 ; !important;
+}

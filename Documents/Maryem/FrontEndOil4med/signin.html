@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   SignIn
+  </title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="signin.css">
+  <meta content="noindex, nofollow" name="robots"/>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    SignIn
+   </h1>
+   <form id="signinForm">
+    <div class="form-group">
+            <label for="address">Ganache Address:</label>
+            <span id="ganacheAddress"></span> <!-- Affiche l'adresse ici -->
+        </div>
+        <button class="btn custom-btn2" type="button" id="bouton-connexion" >
+            Connect to Ganache
+        </button>
+        
+        <button class="btn custom-btn" type="submit">
+     		Sign In
+    	</button>
+   </form>
+   <div class="signin-btn">
+    <a href="signup.html" id="signinLink">
+     Not yet registered? Sign up
+    </a>
+   </div>
+  </div>
+  <!-- Bootstrap & jQuery JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Include Web3.js -->
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <!-- Custom JS -->
+  <script type='text/javascript'>
+    document.getElementById('bouton-connexion').addEventListener('click', async () => {
+        try {
+            const web3 = new Web3('http://127.0.0.1:8545'); // Change to your Ganache RPC URL
+            const accounts = await web3.eth.getAccounts();
+            if (accounts.length > 0) {
+                // Affiche l'adresse du compte
+                document.getElementById('ganacheAddress').innerText = accounts[0];
+            } else {
+                alert('No accounts found');
+            }
+        } catch (error) {
+            console.error('Failed to connect to Ganache:', error);
+            alert('Failed to connect to Ganache. Please check console for details.');
+        }
+    });
+  </script>
+</body>
+</html>
+
